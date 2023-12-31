@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Galeria</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	
+	
+	<div class="slideshow-container">
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 10</div>
+        <img src="foto/mv.png" style="width:100%" alt="VERSTAPPEN">
+        <div class="text">Max Verstappen</div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 10</div>
+        <img src="foto/max.png" style="width:100%" alt="vERSTAPPEN">
+        <div class="text">Max Verstappen</div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 10</div>
+        <img src="foto/rb.png" style="width:100%" alt="Red Bull">
+        <div class="text"> Red Bull</div>
+      </div>
+		<div class="mySlides fade">
+        <div class="numbertext">4 / 10</div>
+        <img src="foto/senna1.png" style="width:100%" alt="Senna">
+        <div class="text">Ayrton Senna</div>
+      </div>
+		<div class="mySlides fade">
+        <div class="numbertext">5 / 10</div>
+        <img src="foto/senna.jpg" style="width:100%" alt="Senna">
+        <div class="text">Ayrton Senna</div>
+      </div>
+		<div class="mySlides fade">
+        <div class="numbertext">6 / 10</div>
+        <img src="foto/hamilton.jpg" style="width:100%" alt="Hamilton">
+        <div class="text">Lewis Hamilton</div>
+      </div>
+		<div class="mySlides fade">
+		<div class="numbertext">7 / 10</div>
+        <img src="foto/Vettel.jpg" style="width:100%" alt="Vettel">
+        <div class="text">Sebastian Vettel</div>
+      </div>
+		<div class="mySlides fade">
+		<div class="numbertext">7 / 10</div>
+        <img src="foto/nando.png" style="width:100%" alt="Alonso">
+        <div class="text">Fernando Alonso</div>
+      </div>
+		<div class="mySlides fade">
+		<div class="numbertext">8 / 10</div>
+        <img src="foto/kubica1.png" style="width:100%" alt="Kubica">
+        <div class="text">Robert Kubica</div>
+      </div>
+		<div class="mySlides fade">
+		<div class="numbertext">9 / 10</div>
+        <img src="foto/kubica.jpg" style="width:100%" alt="Kubica">
+        <div class="text">Robert Kubica</div>
+      </div>
+		<div class="mySlides fade">
+		<div class="numbertext">9 / 10</div>
+        <img src="foto/seb.png" style="width:100%" alt="Vettel">
+        <div class="text">Sebastian Vettel</div>
+      </div>
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+		<span class="dot" onclick="currentSlide(4)"></span>
+		<span class="dot" onclick="currentSlide(5)"></span>
+		<span class="dot" onclick="currentSlide(6)"></span>
+		<span class="dot" onclick="currentSlide(7)"></span>
+		<span class="dot" onclick="currentSlide(8)"></span>
+		<span class="dot" onclick="currentSlide(9)"></span>
+		<span class="dot" onclick="currentSlide(10)"></span>
+    </div>
+	
+	 <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if(n > slides.length) {
+          slideIndex = 1
+        }
+        if(n < 1) {
+          slideIndex = slides.length
+        }
+        for(i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for(i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
+	
+</body>
+</html>
