@@ -18,15 +18,15 @@
 			<div id="myNav" class="overlay">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 	<div class="topnav">
-  <a href="f1.html" target="ramka" >Verstappen</a>
-  <a href="Senna.html" target="ramka" >Senna</a>
-  <a href="schumi.html" target="ramka">Schumacher</a>
-	<a href="Vettel.html" target="ramka">Vettel</a>
-	<a href="Alonso.html" target="ramka">Alonso</a>
-	<a href="Hamilton.html" target="ramka">Hamilton</a>
-	<a href="Kubica.html" target="ramka">Kubica</a>	
-	<a href="Gallery.html" target="ramka">Galeria Zdjęć</a>	
-	<a href="ankieta.html" target="ramka">Ankieta</a>		
+  <a href="f1.html" target="ramka" onclick="closeNav()" >Verstappen</a>
+  <a href="Senna.html" target="ramka" onclick="closeNav()" >Senna</a>
+  <a href="schumi.html" target="ramka" onclick="closeNav()">Schumacher</a>
+	<a href="Vettel.html" target="ramka" onclick="closeNav()" >Vettel</a>
+	<a href="Alonso.html" target="ramka" onclick="closeNav()">Alonso</a>
+	<a href="Hamilton.html" target="ramka" onclick="closeNav()">Hamilton</a>
+	<a href="Kubica.html" target="ramka" onclick="closeNav()">Kubica</a>	
+	<a href="Gallery.html" target="ramka" onclick="closeNav()">Galeria Zdjęć</a>	
+	<a href="ankieta.html" target="ramka" onclick="closeNav()">Ankieta</a>		
  
 </div>
 			</div></div>
@@ -46,6 +46,7 @@ function openNav() {
 
 function closeNav() {
   document.getElementById("myNav").style.height = "0%";
+	alert( "tak")
 }
 </script>
 </body>
